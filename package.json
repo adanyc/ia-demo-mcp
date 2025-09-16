@@ -1,0 +1,13 @@
+{
+  "name": "mcp",
+  "version": "1.0.0",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "inspector": "npx -y @modelcontextprotocol/inspector npx -y tsx main.ts"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.17.5",
+    "zod": "^3.25.76"
+  }
+}
