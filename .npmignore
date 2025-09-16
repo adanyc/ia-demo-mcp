@@ -1,5 +1,7 @@
+coverage/
 node_modules/
 src/
 .editorconfig
 .gitignore
+jest.config.js
 tsconfig.json

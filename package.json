@@ -1,16 +1,37 @@
 {
-  "name": "mcp",
+  "name": "dbz-mcp-server",
   "version": "1.0.0",
-  "description": "MCP",
-  "main": "index.js",
+  "description": "Dragon Ball Z MCP Server",
   "type": "module",
-  "scripts": {
-    "inspector": "npx -y @modelcontextprotocol/inspector npx -y tsx main.ts"
+  "main": "./dist/index.js",
+  "bin": {
+    "dbz-mcp-server": "./dist/index.js"
   },
+  "files": [
+    "dist/**/*",
+    "README.md",
+    "LICENSE"
+  ],
   "author": "adanyc",
-  "license": "ISC",
+  "license": "SEE LICENSE IN LICENSE",
+  "scripts": {
+    "build": "tsc && shx chmod +x ./dist/*.js",
+    "start": "./dist/index.js",
+    "inspector": "mcp-inspector ./dist/index.js",
+    "watch": "tsc --watch",
+    "test": "jest --coverage"
+  },
   "dependencies": {
     "@modelcontextprotocol/sdk": "^1.17.5",
     "zod": "^3.25.76"
+  },
+  "devDependencies": {
+    "@modelcontextprotocol/inspector": "^0.16.7",
+    "@types/jest": "^29.5.14",
+    "@types/node": "^22.15.0",
+    "jest": "^29.7.0",
+    "shx": "^0.4.0",
+    "ts-jest": "^29.3.2",
+    "typescript": "~5.5.2"
   }
 }
